@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api")
 public class Users {
 
     @Autowired
@@ -51,7 +51,7 @@ public class Users {
                     ),
             }
     )
-    @GetMapping("/")
+    @GetMapping("/users")
     public ResponseEntity<List<User>> findAllUsers() {
         List<User> UserList = this.userService.getAllUsers();
         return new ResponseEntity<>(UserList, HttpStatus.OK);
