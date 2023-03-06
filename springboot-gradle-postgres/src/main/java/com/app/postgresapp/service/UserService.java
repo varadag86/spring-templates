@@ -1,9 +1,11 @@
 package com.app.postgresapp.service;
 
 import com.app.postgresapp.domain.User;
+import com.app.postgresapp.exceptionHandler.DataNotFoundException;
 import com.app.postgresapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -17,18 +19,17 @@ public class UserService implements UserInterface{
     @Override
     public List<User> getAllUsers() {
         List<User> userList = this.userRepository.findAll();
-        System.out.println(userList);
         return userList.stream().toList();
     }
 
     @Override
-    public User getUserById(long id) throws Exception {
+    public User getUserById(long id) {
         Optional<User> user = this.userRepository.findById(id);
         if(user.isPresent()) {
             return user.get();
         }
 
-        throw new Exception("User not found for the given userid");
+        throw new DataNotFoundException();
     }
 
     @Override
@@ -42,7 +43,7 @@ public class UserService implements UserInterface{
     }
 
     @Override
-    public User updateExistingUser(long id, User modifiedUserInfo) throws Exception {
+    public User updateExistingUser(long id, User modifiedUserInfo) {
         User user = this.getUserById(id);
         user.setExperience(modifiedUserInfo.getExperience());
         user.setEmailAddress(modifiedUserInfo.getEmailAddress());
@@ -52,7 +53,7 @@ public class UserService implements UserInterface{
     }
 
     @Override
-    public void deleteUser(long id) throws Exception {
+    public void deleteUser(long id) {
         User user = this.getUserById(id);
         this.userRepository.delete(user);
     }

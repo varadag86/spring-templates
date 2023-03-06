@@ -186,7 +186,7 @@ public class Users {
                     ),
             }
     )
-    @PutMapping("/users/{id}")
+    @DeleteMapping("/users/{id}")
     public ResponseEntity<Long> deleteExistingUser(@PathVariable long id) throws Exception {
         this.userService.deleteUser(id);
         return new ResponseEntity<>(id, HttpStatus.NO_CONTENT);
