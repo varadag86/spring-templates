@@ -12,6 +12,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "name")
     private String name;
-    private int population;
+
+    @Column(name = "email_address")
+    private String emailAddress;
+
+    @Column(name = "years_of_experience")
+    private int experience;
 }
