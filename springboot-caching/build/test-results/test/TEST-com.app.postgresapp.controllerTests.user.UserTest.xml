@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.postgresapp.controllerTests.user.UserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-07T02:33:11" hostname="Varads-Mac-mini.local" time="1.266">
+  <properties/>
+  <testcase name="get all users" classname="com.app.postgresapp.controllerTests.user.UserTest" time="1.266"/>
+  <system-out><![CDATA[08:02:52.851 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+08:02:52.896 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+08:02:53.018 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.app.postgresapp.controllerTests.user.UserTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+08:02:53.049 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.app.postgresapp.controllerTests.user.UserTest], using SpringBootContextLoader
+08:02:53.058 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.app.postgresapp.controllerTests.user.UserTest]: class path resource [com/app/postgresapp/controllerTests/user/UserTest-context.xml] does not exist
+08:02:53.059 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.app.postgresapp.controllerTests.user.UserTest]: class path resource [com/app/postgresapp/controllerTests/user/UserTestContext.groovy] does not exist
+08:02:53.059 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.app.postgresapp.controllerTests.user.UserTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+08:02:53.062 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.app.postgresapp.controllerTests.user.UserTest]: UserTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:02:53.356 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/varad/Code/JavaProgramming/springboot-gradle-postgres/build/classes/java/main/com/app/postgresapp/BaseApplication.class]
+08:02:53.358 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.app.postgresapp.BaseApplication for test class com.app.postgresapp.controllerTests.user.UserTest
+08:02:53.591 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.app.postgresapp.controllerTests.user.UserTest]: using defaults.
+08:02:53.592 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+08:02:53.653 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2dbfcf7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@239f017e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@38cedb7d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@772caabe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2acdcce8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7102ac3e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3f598450, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2db2a05f, org.springframework.test.context.event.EventPublishingTestExecutionListener@695c938d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d5bb1c4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7ed3df3b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@465b38e6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4b960b5b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1b13467c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7bd96822]
+08:02:53.665 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@72eb6200 testClass = UserTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@76ececd testClass = UserTest, locations = '{}', classes = '{class com.app.postgresapp.BaseApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@5e5073ab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@c3177d5, [ImportsContextCustomizer@7affc159 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@117bcfdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4da9f723, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5a8cbffe, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4763c727], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::      (v2.7.10-SNAPSHOT)
+
+2023-03-07 08:02:54.576  INFO 6565 --- [    Test worker] c.a.p.controllerTests.user.UserTest      : Starting UserTest using Java 17.0.2 on Varads-Mac-mini.local with PID 6565 (started by varad in /Users/varad/Code/JavaProgramming/springboot-gradle-postgres)
+2023-03-07 08:02:54.578  INFO 6565 --- [    Test worker] c.a.p.controllerTests.user.UserTest      : The following 1 profile is active: "test"
+2023-03-07 08:02:56.421  INFO 6565 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-07 08:02:56.527  INFO 6565 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 1 JPA repository interfaces.
+2023-03-07 08:02:57.740  INFO 6565 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-07 08:02:57.907  INFO 6565 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-03-07 08:02:58.351  INFO 6565 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-07 08:02:58.620  INFO 6565 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-07 08:02:58.777  INFO 6565 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-03-07 08:02:58.836  INFO 6565 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-03-07 08:03:00.053  INFO 6565 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2023-03-07 08:03:00.056  INFO 6565 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2023-03-07 08:03:00.098  INFO 6565 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 20.10.20
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 2990 MB
+2023-03-07 08:03:00.153  INFO 6565 --- [    Test worker] ]]>&#x1f433;<![CDATA[ [testcontainers/ryuk:0.3.4]           : Creating container for image: testcontainers/ryuk:0.3.4
+2023-03-07 08:03:00.421  INFO 6565 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2023-03-07 08:03:00.599  INFO 6565 --- [    Test worker] ]]>&#x1f433;<![CDATA[ [testcontainers/ryuk:0.3.4]           : Container testcontainers/ryuk:0.3.4 is starting: 1da500a82e716c70050024b5c211c805684960eee04a2116dce07bb7e2f0ba59
+2023-03-07 08:03:01.551  INFO 6565 --- [    Test worker] ]]>&#x1f433;<![CDATA[ [testcontainers/ryuk:0.3.4]           : Container testcontainers/ryuk:0.3.4 started in PT1.432638S
+2023-03-07 08:03:01.570  INFO 6565 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-03-07 08:03:01.571  INFO 6565 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2023-03-07 08:03:01.573  INFO 6565 --- [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2023-03-07 08:03:01.574  INFO 6565 --- [    Test worker] ]]>&#x1f433;<![CDATA[ [postgres:12.9-alpine]                : Creating container for image: postgres:12.9-alpine
+2023-03-07 08:03:01.680  INFO 6565 --- [    Test worker] ]]>&#x1f433;<![CDATA[ [postgres:12.9-alpine]                : Container postgres:12.9-alpine is starting: 89d130b7534b6c4200cefa7a93e33b679871aa99b8c53263daddb9c893470b06
+2023-03-07 08:03:04.336  INFO 6565 --- [    Test worker] ]]>&#x1f433;<![CDATA[ [postgres:12.9-alpine]                : Container postgres:12.9-alpine started in PT2.762229S
+2023-03-07 08:03:04.634  INFO 6565 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-07 08:03:04.705  INFO 6565 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+2023-03-07 08:03:06.701  WARN 6565 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-07 08:03:06.701  WARN 6565 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user" does not exist, skipping
+2023-03-07 08:03:06.705  WARN 6565 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-07 08:03:06.705  WARN 6565 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "hibernate_sequence" does not exist, skipping
+2023-03-07 08:03:06.739  INFO 6565 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-07 08:03:06.873  INFO 6565 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-07 08:03:08.211  WARN 6565 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-07 08:03:11.146  INFO 6565 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-03-07 08:03:11.147  INFO 6565 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-03-07 08:03:11.150  INFO 6565 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-03-07 08:03:11.234  INFO 6565 --- [    Test worker] c.a.p.controllerTests.user.UserTest      : Started UserTest in 17.468 seconds (JVM running for 25.359)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/users
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.app.postgresapp.controllers.users.Users
+           Method = com.app.postgresapp.controllers.users.Users#findAllUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":1,"name":"John Doe","emailAddress":"john.doe@test.com","experience":14},{"id":2,"name":"John Doe","emailAddress":"john.doe@test.com","experience":14}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
