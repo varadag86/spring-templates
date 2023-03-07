@@ -10,9 +10,8 @@ public class Utils {
 
     @Bean
     public ObjectMapper mapper() {
-        ObjectMapper mapper = new ObjectMapper()
-                .registerModule(new ProblemModule().withStackTraces());
 
-        return mapper;
+        return new ObjectMapper()
+                .registerModule(new ProblemModule().withStackTraces());
     }
 }
