@@ -5,6 +5,7 @@ import com.app.postgresapp.exceptionHandler.DataNotFoundException;
 import com.app.postgresapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.webjars.NotFoundException;
 
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class UserService implements UserInterface{
             return user.get();
         }
 
-        throw new DataNotFoundException();
+        throw new DataNotFoundException("Missing data for user domain", id);
     }
 
     @Override
